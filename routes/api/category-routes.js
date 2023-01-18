@@ -6,20 +6,10 @@ const { Category, Product } = require('../../models');
 
 router.get('/', async (req, res) => {
   try {
-    const Data = await Driver.findAll({
-      include: [{ model: License }, { model: Car }],
-      attributes: {
-        include: [
-          [
-            // Use plain SQL to add up the total mileage
-            sequelize.literal(
-              '(SELECT SUM(mileage) FROM car WHERE car.driver_id = driver.id)'
-            ),
-            'totalMileage',
-          ],
-        ],
-      },
+    const Data = await Category.findAll({
+      include: [{ model: Product }],
     });
+      
     res.status(200).json(driverData);
   } catch (err) {
     res.status(500).json(err);

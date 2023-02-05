@@ -5,7 +5,7 @@ const { Tag, Product, ProductTag } = require('../../models');
 
 router.get('/', async (req, res) => {
   try {
-    const tagData = await tag.findAll();
+    const tagData = await Tag.findAll();
     res.json(tagData);
   } catch (err) {
       console.error(err)
@@ -20,7 +20,7 @@ router.get('/:id', async (req, res) => {
       res.status(404).json({ message: '' });
       return;
     }
-    res.status(200).json(userData);
+    res.status(200).json(tagData);
   } catch (err) {
     res.status(500).json(err);
   }

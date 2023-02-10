@@ -19,9 +19,11 @@ Its a Retail Ecommerce backend database tested with insomnia.  The retail manage
 
  ## Link
 
-
+[Website](https://drive.google.com/file/d/1EU2DjMDoU_GXOGWTIzornArox-vTjUfJ/view)
 
 
  ## Visuals
+
+ [Homepage]( ../ecommerce-retail-web/asset/images/ecomc.png)
 
 

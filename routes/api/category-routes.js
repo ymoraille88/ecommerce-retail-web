@@ -51,7 +51,7 @@ router.put('/:id', async (req, res) => {
         },
         individualHooks: true
       });
-      if (!categoryData[0]) {
+      if (!categoryData) {
         res.status(404).json({ message: 'No category founnd with this id' });
         return;
       }
